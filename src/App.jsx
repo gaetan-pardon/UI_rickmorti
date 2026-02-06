@@ -14,7 +14,7 @@ function App() {
   const [page, setPage] = useState(1);
   const [pagesTotal, setPagesTotal] = useState(null);
 
-  const [itemsfilter, setItemsfilter] = useState([]);  // ce que tu affiches
+  const [itemsfilter, setItemsfilter] = useState([]);  // ce que tu affiches, défini pour avoir une longueur nulle par défaut
   
 
 
@@ -77,7 +77,7 @@ function App() {
 
   if (loading) return <p>Chargement...</p>;
   if (error) return <p>Erreur: {error}</p>;
-  if (itemsfilter.length === 0) return <p>Aucun résultat</p>;
+  if (itemsfilter.length === 0) return <p>Aucun résultat</p>; /*itemsfilter est défini pour toujours avoir une longueur, et la longueur et nul part défaut*/
   if (pagesTotal < page) return <p>hors page</p>;
 
 
