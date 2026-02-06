@@ -33,7 +33,7 @@ function App() {
         setPagesTotal(data.info.pages);
       } catch (e) {
         setError(e.message);
-        setItems([]);
+        setItemsfilter([]);
       } finally {
         setLoading(false);
       }
