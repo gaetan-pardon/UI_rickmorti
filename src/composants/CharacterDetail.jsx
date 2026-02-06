@@ -23,7 +23,7 @@ export default function CharacterDetail({ character, onNext }) {
         Location : {character.location?.name}
       </div>
 
-      {/* Bouton suivant (si tu veux le garder ici) */}
+      
       {onNext && (
         <button type="button" onClick={onNext}>
           Suivant
