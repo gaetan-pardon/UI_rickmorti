@@ -1,6 +1,6 @@
 # Rick and Morty - Explorateur de Personnages
 
-## Instalation
+## Installation
 
 ```npm install```
 
