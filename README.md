@@ -1,5 +1,18 @@
 # Rick and Morty - Explorateur de Personnages
 
+## Instalation
+
+```npm install```
+
+## Lancement de l'API
+
+```npm run dev```
+
+Fontend accessible depuis localhost:5173
+
+##
+
+
 ## Description du Projet
 
 Cette application est un explorateur interactif de personnages de la série animée **Rick and Morty**. Construite avec **React** et **Vite**, elle permet aux utilisateurs de découvrir et explorer les personnages de l'univers Rick and Morty de manière intuitive et visuelle.
