@@ -77,7 +77,7 @@ function App() {
 
   if (loading) return <p>Chargement...</p>;
   if (error) return <p>Erreur: {error}</p>;
-  if (itemsfilter.length === 0) return <p>Aucun résultat</p>; /*itemsfilter est défini pour toujours avoir une longueur, et la longueur et nul part défaut*/
+  if (itemsfilter.length === 0) return <p>Aucun résultat</p>; /*itemsfilter est défini pour toujours avoir une longueur, et la longueur est nul par défaut*/
   if (pagesTotal < page) return <p>hors page</p>;
 
 
