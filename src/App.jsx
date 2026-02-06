@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from 'react'
 import './App.css'
 import CharacterDetail from "./composants/CharacterDetail";
@@ -15,6 +16,7 @@ function App() {
   const [pagesTotal, setPagesTotal] = useState(null);
 
   const [itemsfilter, setItemsfilter] = useState([]);  // ce que tu affiches
+  
 
 
   useEffect(() => {
@@ -28,7 +30,6 @@ function App() {
         if (!res.ok) throw new Error(res.status);
 
         const data = await res.json();
-        console.log("Données filtrée reçues :", data);
         setItemsfilter(data);
         setPagesTotal(data.info.pages);
       } catch (e) {
@@ -69,6 +70,13 @@ function App() {
   const selected = Array.isArray(itemsfilter?.results)
     ? itemsfilter.results[count]
     : null;
+
+  const selectRedirect = (index) => {
+    setCount(index);
+    window.scrollTo(0, 0);
+   /*  const navigate = useNavigate();
+    navigate('#detail'); */
+  }
 
   if (loading) return <p>Chargement...</p>;
   if (error) return <p>Erreur: {error}</p>;
@@ -136,7 +144,7 @@ function App() {
 
         <CharacterGrid
           results={itemsfilter?.results}
-          onSelectIndex={(index) => setCount(index)}
+          onSelectIndex={selectRedirect}
         />
 
 
