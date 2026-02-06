@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from 'react'
 import './App.css'
 import CharacterDetail from "./composants/CharacterDetail";
@@ -74,8 +73,6 @@ function App() {
   const selectRedirect = (index) => {
     setCount(index);
     window.scrollTo(0, 0);
-   /*  const navigate = useNavigate();
-    navigate('#detail'); */
   }
 
   if (loading) return <p>Chargement...</p>;
